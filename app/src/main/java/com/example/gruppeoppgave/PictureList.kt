@@ -2,6 +2,6 @@ package com.example.gruppeoppgave
 
 class PictureList {
 
-    val id: List<Id>
+   //companion object val id: List<Id>
 
 }
