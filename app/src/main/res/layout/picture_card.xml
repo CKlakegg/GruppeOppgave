@@ -2,11 +2,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="600dp"
-    android:background="@color/teal_200">
+    android:layout_height="600dp">
 
     <ImageView
-        android:id="@+id/house_imageView"
+        android:id="@+id/main_imageView"
         android:layout_width="321dp"
         android:layout_height="339dp"
         android:layout_marginStart="79dp"
@@ -25,12 +24,28 @@
         android:id="@+id/favourite_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_b"
         android:text="Favourite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.886" />
+        app:layout_constraintVertical_bias="0.802" />
+
+    <Button
+        android:id="@+id/new_image_button"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:background="@drawable/rounded_b"
+        android:text="New Image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.943" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 

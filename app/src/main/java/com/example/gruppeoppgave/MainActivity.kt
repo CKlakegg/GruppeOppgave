@@ -11,6 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 class MainActivity : AppCompatActivity() {
 
     private var pictureList: PictureList
+    var customAdapter: CustomAdapter? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,6 +1,6 @@
 package com.example.gruppeoppgave
 
-class PictureList (){
+class PictureList {
 
     val id: List<Id>
 
