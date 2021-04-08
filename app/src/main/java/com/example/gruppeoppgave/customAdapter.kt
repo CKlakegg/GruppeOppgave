@@ -20,8 +20,8 @@ class customAdapter : AppCompatActivity() {
         //setContentView(R.id.layout.picture_card)
 
        // imageView= main_imageView
-        favouriteButton= favourite_button
-        newImageButton= new_image_button
+       // favouriteButton= favourite_button
+       // newImageButton= new_image_button
 
 
     }
