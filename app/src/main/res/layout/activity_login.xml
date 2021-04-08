@@ -25,17 +25,32 @@
         android:textColor="@color/blue"
         android:textSize="50dp"
         app:backgroundTint="@color/lightpink"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frontlogo_image"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frontlogo_image" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/front_lottie"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/welcome_button"
+        app:layout_constraintTop_toBottomOf="@id/frontlogo_image"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_front" />
 
     <ImageView
         android:id="@+id/frontlogo_image"
+        android:layout_width="406dp"
+        android:layout_height="364dp"
+        android:layout_marginTop="32dp"
         android:elevation="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logophotoorama" />
