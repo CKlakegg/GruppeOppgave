@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.favourites.FavouriteFragment">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/picture_RecyclerView"
+        android:layout_width="413dp"
+        android:layout_height="334dp"
+        android:layout_marginTop="196dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <TextView
         android:id="@+id/text_dashboard"
         android:layout_width="wrap_content"
@@ -22,4 +33,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

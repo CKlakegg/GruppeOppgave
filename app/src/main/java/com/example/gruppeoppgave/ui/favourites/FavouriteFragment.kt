@@ -25,7 +25,9 @@ class FavouriteFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_favourite, container, false)
 
-        return view
+
+
+        return picture_card
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
