@@ -23,7 +23,7 @@ class FavouriteFragment : Fragment() {
     ): View? {
         favouriteViewModel = ViewModelProvider(this).get(FavouriteViewModel::class.java)
 
-        val root = inflater.inflate(R.layout.fragment_favourite, container, false)
+        val view = inflater.inflate(R.layout.fragment_favourite, container, false)
 
         return view
     }
