@@ -31,7 +31,7 @@ class FavouriteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        picture_card.setFavoritesButtonClicked {
+        picture_card.setOnClickListener() {
             Toast.makeText(context, "Favourite clicked", Toast.LENGTH_LONG).show()
 
         }
