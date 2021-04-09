@@ -1,4 +1,4 @@
-package com.example.gruppeoppgave.ui.favorites
+package com.example.gruppeoppgave.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

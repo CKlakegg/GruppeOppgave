@@ -1,4 +1,4 @@
-package com.example.gruppeoppgave.ui.favorites
+package com.example.gruppeoppgave.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

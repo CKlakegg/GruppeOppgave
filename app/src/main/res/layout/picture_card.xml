@@ -18,8 +18,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="right"
-        android:background="@drawable/ic_favorite"
-        />
+        android:background="@drawable/ic_favorite" />
 
 
 </androidx.cardview.widget.CardView>
