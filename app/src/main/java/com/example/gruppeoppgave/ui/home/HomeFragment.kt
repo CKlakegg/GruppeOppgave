@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.gruppeoppgave.R
-import com.example.gruppeoppgave.view.DoCard
+
 
 class HomeFragment : Fragment() {
+
 
     private lateinit var homeViewModel: HomeViewModel
 
