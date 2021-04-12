@@ -10,9 +10,9 @@ import com.example.gruppeoppgave.R
 import com.example.gruppeoppgave.ui.pictures.PicturesViewModel
 import com.example.gruppeoppgave.view.DoCard
 
-class HomeFragment : Fragment() {
+class PicturesFragment : Fragment() {
 
-    private lateinit var homeViewModel: PicturesViewModel
+    private lateinit var picturesViewModel: PicturesViewModel
 
 
     override fun onCreateView(
@@ -20,7 +20,7 @@ class HomeFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
+       picturesViewModel =
                 ViewModelProvider(this).get(PicturesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_profile, container, false)
 
