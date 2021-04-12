@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.pictures.PicturesFragment"
     android:orientation="vertical">
 
     <Button
@@ -62,7 +61,7 @@
 
     </TextView>
 
-    <com.example.gruppeoppgave.view.DoCard
+    <com.example.gruppeoppgave.view.ImageCard
         android:id="@+id/card_view_display"
         android:layout_width="350dp"
         android:layout_height="350dp"

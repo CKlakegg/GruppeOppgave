@@ -10,7 +10,7 @@ import androidx.cardview.widget.CardView
 import com.example.gruppeoppgave.R
 import kotlinx.android.synthetic.main.picture_card.view.*
 
-class DoCard(context: Context, attrs: AttributeSet) : CardView(context,attrs) {
+class ImageCard(context: Context, attrs: AttributeSet) : CardView(context,attrs) {
 
     private val imageview: ImageView
     private val favouritesButton: AppCompatButton

@@ -15,7 +15,7 @@ class LoginActivity : AppCompatActivity() {
 
         welcome_button.setOnClickListener {
            val intent = Intent(this, MainActivity::class.java)
-            startActivity((intent))
+            startActivity(intent)
 
             frontlogo_image.alpha = 0f
             frontlogo_image.animate().setDuration(3000).alpha(1f).withEndAction{
