@@ -27,9 +27,6 @@ class HomeViewModel : ViewModel() {
         )
 
         requestQueue.add(stringRequest)
-
-
-        //TODO: Gi svar tilbake til fragmentet med Pictures aktivitet - hvis det gikk bra
     }
 
 }

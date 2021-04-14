@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.volley.toolbox.Volley
@@ -13,6 +14,7 @@ import com.example.gruppeoppgave.R
 import com.example.gruppeoppgave.ui.pictures.HomeViewModel
 import com.example.gruppeoppgave.view.ImageCard
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.picture_card.*
 import kotlinx.android.synthetic.main.picture_card.view.*
 
@@ -36,12 +38,16 @@ class HomeFragment : Fragment() {
             super.onViewCreated(view, savedInstanceState)
 
 
-
         val requestQueue = Volley.newRequestQueue(context)
         homeViewModel.fetchPicturesActivity(requestQueue) { PictureObject ->
             if (PictureObject != null){
 
-                }
+                author_textView.text = PictureObject.author
+
+
+                } else {
+                    Toast.makeText(context,"It's not you, it's us!", Toast.LENGTH_SHORT).show()
+            }
             }
         }
     }
