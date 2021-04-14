@@ -28,13 +28,9 @@ class ImageCard(context: Context, attrs: AttributeSet) : FrameLayout(context,att
 
         imageview = main_imageView
         favouritesButton = main_favourite_button as AppCompatButton
-
     }
 
     fun setFavoritesButtonClicked(clickListner: OnClickListener) {
         favouritesButton.setOnClickListener(clickListner)
     }
-
-
-
 }
