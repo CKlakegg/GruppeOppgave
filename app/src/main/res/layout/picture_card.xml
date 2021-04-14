@@ -21,6 +21,8 @@
     <ImageView
         android:id="@+id/main_imageView"
         android:layout_width="350dp"
+        android:maxHeight="250dp"
+        android:maxWidth="350dp"
         android:layout_height="290dp"
         android:layout_gravity="center"
         android:elevation="25dp"
