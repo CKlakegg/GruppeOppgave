@@ -8,15 +8,6 @@
     android:layout_margin="15dp"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/main_favourite_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="220dp"
-        android:background="@drawable/favorite_empty"
-        android:backgroundTint="@color/lightpink"
-        android:elevation="25dp" />
 
     <ImageView
         android:id="@+id/main_imageView"
@@ -28,5 +19,14 @@
         android:maxHeight="100dp"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/main_favourite_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/favorite_empty"
+        android:backgroundTint="@color/lightpink"
+        android:elevation="25dp" />
 
 </androidx.cardview.widget.CardView>

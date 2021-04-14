@@ -44,7 +44,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
 
-
         val requestQueue = Volley.newRequestQueue(context)
         homeViewModel.fetchPicturesActivity(requestQueue) { PictureObject ->
             if (PictureObject != null){
