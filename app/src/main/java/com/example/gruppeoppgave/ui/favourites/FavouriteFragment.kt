@@ -13,8 +13,6 @@ class FavouriteFragment : Fragment() {
 
     private lateinit var favouriteViewModel: FavouriteViewModel
 
-    private lateinit var picture_card: ImageCard
-
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,

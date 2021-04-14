@@ -15,12 +15,15 @@ import com.example.gruppeoppgave.ui.pictures.HomeViewModel
 import com.example.gruppeoppgave.view.ImageCard
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profile.*
+import kotlinx.android.synthetic.main.fragment_profile.view.*
 import kotlinx.android.synthetic.main.picture_card.*
 import kotlinx.android.synthetic.main.picture_card.view.*
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
+    private lateinit var pictureCard: ImageCard
+
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -31,8 +34,12 @@ class HomeFragment : Fragment() {
                 ViewModelProvider(this).get(HomeViewModel::class.java)
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
+        pictureCard = view.card_view_display
+
         return view
     }
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
@@ -43,6 +50,9 @@ class HomeFragment : Fragment() {
             if (PictureObject != null){
 
                 author_textView.text = PictureObject.author
+
+                pictureCard.setImage(PictureObject.download_url)
+
 
 
                 } else {

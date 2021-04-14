@@ -11,8 +11,9 @@ import javax.security.auth.callback.Callback
 class HomeViewModel : ViewModel() {
     fun fetchPicturesActivity(requestQueue: RequestQueue, callback: (PictureObject?) -> Unit) {
 
-        // https://picsum.photos/v2/list?page=2&limit=100 for list with objects
-        val url = "https://picsum.photos/id/32/info"
+        val randomPicture = (1..250).random()
+
+        val url = "https://picsum.photos/id/$randomPicture/info"
 
         val stringRequest = StringRequest(
             Request.Method.GET,

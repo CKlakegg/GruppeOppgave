@@ -23,11 +23,13 @@ class ImageCard(context: Context, attrs: AttributeSet) : FrameLayout(context,att
     init {
         val view: View = LayoutInflater.from(context).inflate(R.layout.picture_card, this)
 
-        var imageUrl = "https://i.picsum.photos/id/32/4032/3024.jpg?hmac=n7I3OdGszMIwuGcvplNthgBmAxvAZ3rNBBSuDFZaItQ"
-        Picasso.get().load(imageUrl).into(main_imageView)
 
         imageview = main_imageView
         favouritesButton = main_favourite_button as AppCompatButton
+    }
+
+    fun setImage(imageUrl: String){
+        Picasso.get().load(imageUrl).into(main_imageView)
     }
 
     fun setFavoritesButtonClicked(clickListner: OnClickListener) {
