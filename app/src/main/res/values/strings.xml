@@ -3,5 +3,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Images</string>
     <string name="title_dashboard">Favourite</string>
+    <string name="title_splash_activity">SplashActivity</string>
 
 </resources>

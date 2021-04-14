@@ -1,5 +1,6 @@
 package com.example.gruppeoppgave.login
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,10 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         welcome_button.setOnClickListener {
+              saveToSharedPref()
+
+
+        }
            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 
@@ -23,5 +28,17 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+
+
+  private fun saveToSharedPref() {
+
+        val sharedPreferences =getSharedPreferences(SHARED_PREF_FILE_NAME, Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putBoolean(SHARED_PREF_KEY_LOGIN, true)
+        editor.commit()
     }
 }
+
+
+
+
