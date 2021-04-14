@@ -4,15 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.android.volley.toolbox.Volley
+import com.example.gruppeoppgave.PictureObject
 import com.example.gruppeoppgave.R
 import com.example.gruppeoppgave.ui.pictures.HomeViewModel
+import com.example.gruppeoppgave.view.ImageCard
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.picture_card.*
+import kotlinx.android.synthetic.main.picture_card.view.*
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
-
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -21,12 +27,21 @@ class HomeFragment : Fragment() {
     ): View? {
         homeViewModel =
                 ViewModelProvider(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_profile, container, false)
+        val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
-
-
-        return root
-
+        return view
     }
 
-}
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+            super.onViewCreated(view, savedInstanceState)
+
+
+
+        val requestQueue = Volley.newRequestQueue(context)
+        homeViewModel.fetchPicturesActivity(requestQueue) { PictureObject ->
+            if (PictureObject != null){
+
+                }
+            }
+        }
+    }
