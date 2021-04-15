@@ -12,7 +12,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/fav_favourite_button"
+        android:id="@+id/favourite_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center|end"

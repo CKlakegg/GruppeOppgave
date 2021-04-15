@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.fragment_profile.view.*
 import kotlinx.android.synthetic.main.picture_card.*
 import kotlinx.android.synthetic.main.picture_card.view.*
 
-class ImageCard(context: Context, attrs: AttributeSet) : FrameLayout(context,attrs) {
+class ImageCard(context: Context, attrs: AttributeSet?) : FrameLayout(context,attrs) {
 
     private val imageview: ImageView
     private val favouritesButton: AppCompatButton

@@ -10,7 +10,7 @@ import androidx.appcompat.widget.AppCompatButton
 import com.example.gruppeoppgave.R
 import kotlinx.android.synthetic.main.picture_favourtie_card.view.*
 
-class ImageFavouriteCard(context: Context, attrs: AttributeSet) : FrameLayout(context,attrs) {
+class ImageFavoriteCard(context: Context, attrs: AttributeSet?) : FrameLayout(context,attrs) {
 
     private val imageFavouriteview: ImageView
     private val favFavouriteButton: AppCompatButton
@@ -20,7 +20,7 @@ class ImageFavouriteCard(context: Context, attrs: AttributeSet) : FrameLayout(co
         val view: View = LayoutInflater.from(context).inflate(R.layout.picture_favourtie_card, this)
 
         imageFavouriteview = imageView_favourites
-        favFavouriteButton = fav_favourite_button as AppCompatButton
+        favFavouriteButton = favourite_button
 
 
     }
