@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
+import androidx.core.app.ActivityCompat.recreate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.volley.toolbox.Volley
@@ -35,7 +35,6 @@ class HomeFragment : Fragment() {
 
         pictureCard = view.card_view_display
 
-
         return view
     }
 
@@ -55,5 +54,21 @@ class HomeFragment : Fragment() {
                     Toast.makeText(context, "Something went wrong :(", Toast.LENGTH_SHORT).show()
             }
             }
+
+        newImage_button.setOnClickListener {
+
+            val requestQueue = Volley.newRequestQueue(context)
+            homeViewModel.fetchPicturesActivity(requestQueue) { PictureObject ->
+                if (PictureObject != null){
+
+                    author_textView.text = PictureObject.author
+
+                    pictureCard.setImage(PictureObject.download_url)
+
+                } else {
+                    Toast.makeText(context, "Something went wrong :(", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
         }
     }

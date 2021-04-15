@@ -25,6 +25,4 @@ class ImageFavouriteCard(context: Context, attrs: AttributeSet) : FrameLayout(co
 
     }
 
-
-
 }

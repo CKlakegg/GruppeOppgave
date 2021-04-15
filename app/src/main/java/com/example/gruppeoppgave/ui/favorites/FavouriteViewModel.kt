@@ -1,4 +1,4 @@
-package com.example.gruppeoppgave.ui.favourites
+package com.example.gruppeoppgave.ui.favorites
 
 
 import androidx.lifecycle.ViewModel
