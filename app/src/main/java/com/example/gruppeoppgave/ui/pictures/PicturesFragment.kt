@@ -1,19 +1,18 @@
 package com.example.gruppeoppgave.ui.pictures
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.volley.toolbox.Volley
-import com.example.gruppeoppgave.PictureObject
+import com.example.gruppeoppgave.MainActivity
 import com.example.gruppeoppgave.R
-import com.example.gruppeoppgave.ui.pictures.HomeViewModel
 import com.example.gruppeoppgave.view.ImageCard
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 import kotlinx.android.synthetic.main.picture_card.*
@@ -26,9 +25,9 @@ class HomeFragment : Fragment() {
 
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         homeViewModel =
                 ViewModelProvider(this).get(HomeViewModel::class.java)
@@ -36,13 +35,13 @@ class HomeFragment : Fragment() {
 
         pictureCard = view.card_view_display
 
+
         return view
     }
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
+
 
         val requestQueue = Volley.newRequestQueue(context)
         homeViewModel.fetchPicturesActivity(requestQueue) { PictureObject ->
@@ -52,10 +51,8 @@ class HomeFragment : Fragment() {
 
                 pictureCard.setImage(PictureObject.download_url)
 
-
-
                 } else {
-                    Toast.makeText(context,"It's not you, it's us!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Something went wrong :(", Toast.LENGTH_SHORT).show()
             }
             }
         }

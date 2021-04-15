@@ -9,6 +9,7 @@ import com.google.gson.Gson
 import javax.security.auth.callback.Callback
 
 class HomeViewModel : ViewModel() {
+
     fun fetchPicturesActivity(requestQueue: RequestQueue, callback: (PictureObject?) -> Unit) {
 
         val randomPicture = (1..250).random()
