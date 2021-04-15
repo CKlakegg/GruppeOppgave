@@ -12,7 +12,7 @@ class FavoritesAdapter(
 ) : RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoritesViewHolder {
-        val view = ImageFavoriteCard(parent.context, null)
+        val view = ImageFavoriteCard(parent.context,null)
 
         view.layoutParams = ViewGroup.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
@@ -27,6 +27,7 @@ class FavoritesAdapter(
 
         holder.favoriteView.author_textView.text = PictureObject.author
         holder.favoriteView.card_view_display.setImage(PictureObject.download_url)
+      
 
         holder.favoriteView.favourite_button.setOnClickListener {
             //TODO: Remove favorite

@@ -12,8 +12,8 @@ import kotlinx.android.synthetic.main.picture_favourtie_card.view.*
 
 class ImageFavoriteCard(context: Context, attrs: AttributeSet?) : FrameLayout(context,attrs) {
 
-    private val imageFavouriteview: ImageView
-    private val favFavouriteButton: AppCompatButton
+    val imageFavouriteview: ImageView
+     val favFavouriteButton: AppCompatButton
 
     init {
 

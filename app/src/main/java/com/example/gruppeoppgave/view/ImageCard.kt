@@ -11,9 +11,8 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.example.gruppeoppgave.R
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_profile.view.*
-import kotlinx.android.synthetic.main.picture_card.*
 import kotlinx.android.synthetic.main.picture_card.view.*
+import java.lang.reflect.Array.get
 
 class ImageCard(context: Context, attrs: AttributeSet?) : FrameLayout(context,attrs) {
 
