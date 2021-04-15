@@ -25,6 +25,9 @@ class FavoritesAdapter(
     override fun onBindViewHolder(holder: FavoritesViewHolder, position: Int) {
         val PictureObject = dataSet[position]
 
+        holder.favoriteView.setTitle(PictureObject.author)
+        holder.favoriteView.setImage(PictureObject.download_url)
+
 
         holder.favoriteView.favourite_button.setOnClickListener {
             //TODO: Remove favorite

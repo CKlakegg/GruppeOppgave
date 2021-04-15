@@ -9,7 +9,7 @@
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/favorite_border"
+        android:icon="@drawable/favorite_full"
         android:fontFamily="@font/roallatie_font"
         android:title="Favorites" />
 

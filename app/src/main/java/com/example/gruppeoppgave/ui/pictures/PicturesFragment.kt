@@ -45,9 +45,9 @@ class HomeFragment : Fragment() {
         homeViewModel.fetchPicturesActivity(requestQueue) { PictureObject ->
             if (PictureObject != null){
 
-                author_textView.text = PictureObject.author
+               // author_textView.text = PictureObject.author
 
-                pictureCard.setImage(PictureObject.download_url)
+             //   pictureCard.setImage(PictureObject.download_url)
 
                 } else {
                     Toast.makeText(context, "Something went wrong :(", Toast.LENGTH_SHORT).show()
@@ -69,7 +69,7 @@ class HomeFragment : Fragment() {
                     }
 
                 } else {
-                    Toast.makeText(context, "Something went wrong :(", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Oh boy.. Something went wrong :(", Toast.LENGTH_SHORT).show()
                 }
             }
         }
