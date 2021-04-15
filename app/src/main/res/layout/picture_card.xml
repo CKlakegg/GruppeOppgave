@@ -14,7 +14,7 @@
         android:layout_width="350dp"
         android:layout_height="290dp"
         android:layout_gravity="center"
-        android:elevation="25dp"
+        android:elevation="1dp"
         android:maxWidth="100dp"
         android:maxHeight="100dp"
         tools:srcCompat="@tools:sample/avatars" />
@@ -27,6 +27,6 @@
         android:layout_marginTop="220dp"
         android:background="@drawable/favorite_empty"
         android:backgroundTint="@color/lightpink"
-        android:elevation="25dp" />
+        android:elevation="2dp" />
 
 </androidx.cardview.widget.CardView>
