@@ -64,6 +64,10 @@ class HomeFragment : Fragment() {
 
                     pictureCard.setImage(PictureObject.download_url)
 
+                    main_favourite_button.setOnClickListener {
+                        Toast.makeText(context, "Favorite clicked", Toast.LENGTH_SHORT).show()
+                    }
+
                 } else {
                     Toast.makeText(context, "Something went wrong :(", Toast.LENGTH_SHORT).show()
                 }

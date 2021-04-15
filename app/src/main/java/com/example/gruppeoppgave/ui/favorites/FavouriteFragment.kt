@@ -17,8 +17,8 @@ class FavouriteFragment : Fragment() {
     private lateinit var favouriteViewModel: FavouriteViewModel
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var favoritesLayoutManager: LinearLayoutManager
     private lateinit var favoritesAdapter: FavoritesAdapter
+    private lateinit var favoritesLayoutManager: LinearLayoutManager
 
     override fun onCreateView(
             inflater: LayoutInflater,

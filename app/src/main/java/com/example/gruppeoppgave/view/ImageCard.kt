@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 import kotlinx.android.synthetic.main.picture_card.*
 import kotlinx.android.synthetic.main.picture_card.view.*
+import kotlinx.android.synthetic.main.picture_favourtie_card.view.*
 
 class ImageCard(context: Context, attrs: AttributeSet?) : FrameLayout(context,attrs) {
 

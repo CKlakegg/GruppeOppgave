@@ -8,6 +8,8 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatButton
 import com.example.gruppeoppgave.R
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.picture_card.view.*
 import kotlinx.android.synthetic.main.picture_favourtie_card.view.*
 
 class ImageFavoriteCard(context: Context, attrs: AttributeSet?) : FrameLayout(context,attrs) {
@@ -21,6 +23,11 @@ class ImageFavoriteCard(context: Context, attrs: AttributeSet?) : FrameLayout(co
 
         imageFavouriteview = imageView_favourites
         favFavouriteButton = favourite_button
+
+        fun setImageFavorite(imageUrl: String){
+            Picasso.get().load(imageUrl).into(imageView_favourites)
+        }
+
 
 
     }
