@@ -45,8 +45,13 @@ class FavouriteFragment : Fragment() {
             listOf(
                 PictureObject(
                     1,
-                    "",
-                    ""
+                    "fdsfs",
+                    "https://picsum.photos/id/1/info"
+                ),
+                PictureObject(
+                    5,
+                    "sdfsdf",
+                    "gdsgd"
                 )
             ))
         recyclerView.adapter = favoritesAdapter
