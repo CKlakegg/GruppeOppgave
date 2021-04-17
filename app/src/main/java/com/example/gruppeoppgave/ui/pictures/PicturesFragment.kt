@@ -60,6 +60,8 @@ class HomeFragment : Fragment() {
 
                     main_favourite_button.setOnClickListener {
 
+                        heart_lottie.playAnimation()
+
                         homeViewModel.saveFavorite(
                             AppDatabase.getDatabase(requireContext()),
                             PictureObject

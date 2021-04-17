@@ -98,7 +98,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/favorites_line" />
+        app:layout_constraintTop_toBottomOf="@id/favorites_line" >
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/heart_lottie"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="100dp"
+            android:elevation="50dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/heartlottie" />
+    </com.example.gruppeoppgave.view.ImageCard>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
