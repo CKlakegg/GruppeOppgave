@@ -19,11 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="115dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="@id/imageView_favourites"
         android:elevation="50dp"
         android:fontFamily="@font/roallatie_font"
         android:text="*Author*"
         android:textColor="@color/blue"
-        android:textSize="40dp">
+        android:textSize="40dp"
+        android:layout_marginRight="100dp">
 
     </TextView>
 

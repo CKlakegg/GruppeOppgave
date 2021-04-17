@@ -6,6 +6,37 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/favorites_header_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/roallatie_font"
+        android:text="Pictures"
+        android:gravity="center"
+        android:textColor="@color/lightpink"
+        android:textSize="60sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="220dp" />
+
+    <View
+        android:id="@+id/favorites_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07"
+        android:layout_marginLeft="10dp" />
+
     <Button
         android:id="@+id/newImage_button"
         android:layout_width="250dp"
@@ -32,7 +63,7 @@
         android:id="@+id/by_author_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="1dp"
         android:fontFamily="@font/roallatie_font"
         android:text="Photographer:"
         android:textColor="@color/blue"
@@ -48,7 +79,7 @@
         android:id="@+id/author_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/roallatie_font"
         android:text="*Author*"
         android:textColor="@color/blue"
@@ -67,7 +98,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/favorites_line" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,8 +21,6 @@
         android:layout_gravity="center"
         android:elevation="1dp"
         android:layout_margin="10dp"
-        android:maxWidth="100dp"
-        android:maxHeight="100dp"
         tools:srcCompat="@tools:sample/avatars" />
 
         <androidx.appcompat.widget.AppCompatImageButton
