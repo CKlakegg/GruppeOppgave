@@ -4,9 +4,12 @@ import androidx.lifecycle.ViewModel
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
-import com.example.gruppeoppgave.PictureObject
+import com.example.gruppeoppgave.database.AppDatabase
+import com.example.gruppeoppgave.database.PictureObject
 import com.google.gson.Gson
-import javax.security.auth.callback.Callback
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class HomeViewModel : ViewModel() {
 
@@ -29,6 +32,15 @@ class HomeViewModel : ViewModel() {
         )
 
         requestQueue.add(stringRequest)
+    }
+
+    fun saveFavorite(database: AppDatabase, favorite: PictureObject) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val dao = database.picturesDAO()
+            dao.addItem(favorite)
+        }
+
+
     }
 
 }

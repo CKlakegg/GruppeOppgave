@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.volley.toolbox.Volley
 import com.example.gruppeoppgave.R
+import com.example.gruppeoppgave.database.AppDatabase
 import com.example.gruppeoppgave.view.ImageCard
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
@@ -57,11 +58,15 @@ class HomeFragment : Fragment() {
 
                     pictureCard.setImage(PictureObject.download_url)
 
-
                     main_favourite_button.setOnClickListener {
 
-                        Toast.makeText(context, "Favorite clicked", Toast.LENGTH_SHORT).show()
+                        homeViewModel.saveFavorite(
+                            AppDatabase.getDatabase(requireContext()),
+                            PictureObject
+                        )
                     }
+
+                    pictureCard.setFavorite(true)
 
                 } else {
                     Toast.makeText(context, "Oh boy.. Something went wrong :(", Toast.LENGTH_SHORT).show()

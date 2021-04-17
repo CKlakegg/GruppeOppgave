@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gruppeoppgave.PictureObject
+import com.example.gruppeoppgave.database.PictureObject
 import com.example.gruppeoppgave.R
+import com.example.gruppeoppgave.database.AppDatabase
 import kotlinx.android.synthetic.main.fragment_favourite.view.*
 
 class FavouriteFragment : Fragment() {
@@ -38,26 +40,26 @@ class FavouriteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        bindObservers()
         initRecyclerView()
     }
+
+    private fun bindObservers() {
+        favouriteViewModel.favoriteListLiveData.observe(viewLifecycleOwner) { list ->
+            favoritesAdapter.updateData(list)
+        }
+    }
+
     private fun initRecyclerView(){
-        favoritesAdapter = FavoritesAdapter(
-            listOf(
-                PictureObject(
-                    1,
-                    "Bobbin",
-                    "https://picsum.photos/id/1/info"
-                ),
-                PictureObject(
-                    5,
-                    "Caroline",
-                    "https://picsum.photos/id/1/info"
-                )
-            ))
+
+        favoritesAdapter = FavoritesAdapter()
         recyclerView.adapter = favoritesAdapter
 
         favoritesLayoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = favoritesLayoutManager
+
+        val database = AppDatabase.getDatabase(requireContext())
+        favouriteViewModel.fetchAllFavorites(database)
 
     }
 }

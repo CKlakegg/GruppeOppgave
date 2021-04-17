@@ -8,6 +8,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatImageButton
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.toColor
 import com.example.gruppeoppgave.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.picture_card.view.*

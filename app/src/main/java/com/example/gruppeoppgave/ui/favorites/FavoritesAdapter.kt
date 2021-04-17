@@ -2,14 +2,11 @@ package com.example.gruppeoppgave.ui.favorites
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gruppeoppgave.PictureObject
+import com.example.gruppeoppgave.database.PictureObject
 import com.example.gruppeoppgave.view.ImageFavoriteCard
-import kotlinx.android.synthetic.main.fragment_profile.view.*
 import kotlinx.android.synthetic.main.picture_favourtie_card.view.*
-
-class FavoritesAdapter(
+class FavoritesAdapter : RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder>() {
     private var dataSet: List<PictureObject> = listOf()
-) : RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoritesViewHolder {
         val view = ImageFavoriteCard(parent.context, null)
@@ -28,16 +25,17 @@ class FavoritesAdapter(
         holder.favoriteView.setTitle(pictureObject.author)
         holder.favoriteView.setImage(pictureObject.download_url)
 
-
-        holder.favoriteView.favourite_button.setOnClickListener {
-            //TODO: Remove favorite
-        }
-
     }
 
     override fun getItemCount(): Int {
         return dataSet.size
     }
 
+    fun updateData(list: List<PictureObject>){
+        dataSet = list
+        notifyDataSetChanged()
+    }
+
     inner class FavoritesViewHolder(val favoriteView: ImageFavoriteCard): RecyclerView.ViewHolder(favoriteView)
 }
+
