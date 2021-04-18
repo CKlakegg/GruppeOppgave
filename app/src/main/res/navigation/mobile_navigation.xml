@@ -9,10 +9,12 @@
         android:id="@+id/navigation_home"
         android:name="com.example.gruppeoppgave.ui.pictures.HomeFragment"
         android:label="@string/title_home"
+        app:itemTextAppearanceActive="@style/CustomText"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
+        app:itemTextAppearanceActive="@style/CustomText"
         android:name="com.example.gruppeoppgave.ui.favorites.FavouriteFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_favourite" />

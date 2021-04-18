@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:background="@color/lightyellow"
     android:layout_height="match_parent"
+    android:background="@color/lightyellow"
     android:paddingTop="?attr/actionBarSize">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -15,8 +15,9 @@
         android:layout_marginEnd="0dp"
         android:background="@color/blue"
         android:elevation="50dp"
-        app:itemTextColor="@color/lightyellow"
         app:itemIconTint="@color/lightpink"
+        app:itemTextAppearanceActive="@style/CustomText"
+        app:itemTextColor="@color/lightyellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -29,9 +30,11 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/mobile_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
